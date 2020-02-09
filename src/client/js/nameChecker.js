@@ -6,9 +6,9 @@ function checkForName(inputText) {
         "Kirk",
         "Archer",
         "Georgiou"
-    ]
+    ];
 
     if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+        alert("Welcome, Captain!");
     }
 }
