@@ -6,7 +6,11 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
 
 module.exports = {
-	entry: './src/client/index.js',
+	entry: {
+		app: './src/client/index.js',
+		form: './src/client/js/formHandler.js',
+		checker: './src/client/js/nameChecker.js'
+	},
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
@@ -43,6 +47,6 @@ module.exports = {
 			template: './src/client/views/index.html',
 			filename: './index.html'
 		}),
-	    new BundleAnalyzerPlugin()
+		new BundleAnalyzerPlugin()
 	]
 };

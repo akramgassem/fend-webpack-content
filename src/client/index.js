@@ -7,5 +7,4 @@ import './styles/form.css';
 import './styles/header.css';
 
 
-console.log(handleSubmit);
-
+document.querySelector('form').onsubmit = handleSubmit(event);
