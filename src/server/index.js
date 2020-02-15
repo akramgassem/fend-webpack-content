@@ -19,7 +19,7 @@ const PORT = 8081;
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT,  () => {
-    console.log('Example app listening on port 8081!')
+    console.log(`Example app listening on port ${PORT}`)
 })
 
 app.get('/test', (req, res) => {
