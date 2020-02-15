@@ -4,10 +4,16 @@ const mockAPIResponse = require('./mockAPI.js').default
 
 const app = express()
 const cors = require('cors')
+const bodyParser = require('body-parser')
 
 app.use(express.static('dist'));
 
 app.use(cors())
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 console.log(__dirname)
 
