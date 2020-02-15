@@ -10,6 +10,11 @@ module.exports = {
 	mode: 'development',
 	devtool: 'source-map',
 	stats: 'normal',
+	optimization: {
+     splitChunks: {
+       chunks: 'all',
+     },
+   },
 	output: {
 		libraryTarget: 'var',
 		library: 'Client'
