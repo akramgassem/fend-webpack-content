@@ -1,5 +1,5 @@
 const path = require('path');
-const json = require('json-loader!./file.json');
+// const json = require('json-loader!./file.json');
 const webpack = require('webpack');
 
 module.exports = {
@@ -7,6 +7,11 @@ module.exports = {
     devtool: 'source-map',
     module: {
         rules: [
+            {
+                test: '/\.js$/',
+                exclude: /node_modules/,
+                loader: "babel-loader"
+            },
             {
                 enforce: 'pre',
                 test: /\.js$/,
@@ -17,11 +22,6 @@ module.exports = {
                     emitWarning: true,
                     fix: true
                   }
-              },
-            {
-                test: '/\.js$/',
-                exclude: /node_modules/,
-                loader: "babel-loader"
             }
         ]
     }
